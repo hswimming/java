@@ -35,9 +35,11 @@ public class D_Operator {
 		
 		System.out.println(intUnaryOperator.applyAsInt(3));
 		
-		BinaryOperator<Student> binaryOperator = (Student s1, Student s2) -> {
-			return s1.getMath() > s2.getMath() ? s1 : s2;
-		};
+//		BinaryOperator<Student> binaryOperator = (Student s1, Student s2) -> {
+//			return s1.getMath() > s2.getMath() ? s1 : s2;
+//		};
+		
+		BinaryOperator<Student> binaryOperator = (s1, s2) -> s1.getMath() > s2.getMath() ? s1 : s2;
 		
 		System.out.println(binaryOperator.apply(student1, student2));
 	}

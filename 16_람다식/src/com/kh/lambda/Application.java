@@ -2,10 +2,12 @@ package com.kh.lambda;
 
 import com.kh.lambda.practice.A_Lambda;
 import com.kh.lambda.practice.B_Functional;
+import com.kh.lambda.practice.C_MethodReference;
 import com.kh.lambda.standard.A_Consumer;
 import com.kh.lambda.standard.B_Supplier;
 import com.kh.lambda.standard.C_Function;
 import com.kh.lambda.standard.D_Operator;
+import com.kh.lambda.standard.E_Predicate;
 
 public class Application {
 
@@ -62,6 +64,16 @@ public class Application {
 //		new A_Consumer().method1();
 //		new B_Supplier().method1();
 //		new C_Function().method1();
-		new D_Operator().method1();
+//		new D_Operator().method1();
+//		new E_Predicate().method1();
+		
+		/*
+		 * 메소드 참조(Method Reference)
+		 * 	- 메소드 참조는 메소드를 참조해서 매개변수의 정보 및 리턴 타입을 내고,
+		 * 	  람다식에서 불필요한 매개변수를 제거하는 것이 목적이다.
+		 * 	- 참조하는 메소드, 생성자가 존재하지 않으면 오류가 발생한다.
+		 */
+		
+		new C_MethodReference().method1();
 	}
 }
