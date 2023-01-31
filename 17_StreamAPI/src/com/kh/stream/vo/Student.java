@@ -2,7 +2,9 @@ package com.kh.stream.vo;
 
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student> {
+	
+	private int idx;
 	
 	private String name;
 	
@@ -23,6 +25,24 @@ public class Student {
 		this.gender = gender;
 		this.math = math;
 		this.english = english;
+	}
+	
+	public Student(int idx, String name, int age, String gender, int math, int english) {
+		super();
+		this.idx = idx;
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+		this.math = math;
+		this.english = english;
+	}
+
+	public int getIdx() {
+		return idx;
+	}
+
+	public void setIdx(int idx) {
+		this.idx = idx;
 	}
 
 	public String getName() {
@@ -82,10 +102,16 @@ public class Student {
 		return age == other.age && english == other.english && Objects.equals(gender, other.gender)
 				&& math == other.math && Objects.equals(name, other.name);
 	}
-
+	
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", age=" + age + ", gender=" + gender + ", math=" + math + ", english="
-				+ english + "]";
+		return "Student [idx=" + idx + ", name=" + name + ", age=" + age + ", gender=" + gender + ", math=" + math
+				+ ", english=" + english + "]";
+	}
+
+	@Override
+	public int compareTo(Student student) {
+		
+		return this.age - student.age;
 	}
 }

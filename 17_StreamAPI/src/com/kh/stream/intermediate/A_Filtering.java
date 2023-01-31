@@ -7,14 +7,12 @@ import java.util.stream.Stream;
 import com.kh.stream.vo.Student;
 
 public class A_Filtering {
-	
 	/*
 	 * 필터링
 	 * 	- 필터링 중간 처리 기능으로 요소를 걸러내는 역할을 한다.
 	 * 	- distinct()는 중복을 제거하는 메소드이다.
 	 * 	- filter(Predicate)는 매개값으로 전달되는 Predicate가 false를 리턴하는 요소를 제거한다.
 	 */
-	
 	// 중복 제거
 	public void method1() {
 		List<Student> students = Arrays.asList(
